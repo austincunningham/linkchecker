@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/austincunningham/linkchecker/issues"
   },
-  "homepage": "https://github.com/austincunningham/linkchecker#readme"
+  "homepage": "https://github.com/austincunningham/linkchecker#readme",
+  "dependencies": {
+    "bs-broken-links-checker": "^0.2.0",
+    "yargs": "^17.6.0"
+  }
 }
