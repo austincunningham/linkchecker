@@ -13,13 +13,16 @@ check link -u https://austincunningham.ddns.net
 ### Flags
 
 ```bash
-# required 
+# required url you wish to scan
 -u --url 
 -u <url>
-# defaults to section if not set
+# mode scans section page or website defaults to section if not set
 -m --mode
 -m <website,section,page>
-# optional log level defaults to info if not set
+# requestRetryAmount sets the number of attempts on urls default 5
+-r --requestRetryAmount
+-r 3
+# log level(optional) defaults to info if not set
 -l --log
 -l <verbose,debug,error,info,warn>
 ```
