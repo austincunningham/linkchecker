@@ -1,0 +1,25 @@
+{
+  "name": "linkchecker",
+  "version": "1.0.0",
+  "description": "cli deadlink checker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/austincunningham/linkchecker.git"
+  },
+  "keywords": [
+    "cli",
+    "dead",
+    "link",
+    "checker"
+  ],
+  "author": "austincunningham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austincunningham/linkchecker/issues"
+  },
+  "homepage": "https://github.com/austincunningham/linkchecker#readme"
+}
