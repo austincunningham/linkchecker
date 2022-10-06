@@ -9,6 +9,7 @@ yargs.usage('Usage: $0 <command>')
             .alias('u', 'url')
             .alias('m', 'mode')
             .alias('l','log')
+            .alias('r', 'requestRetryAmount')
             .default('url', 'https://austincunningham.ddns.net')
             .default('mode', 'section')
     }, checkWebsite)
@@ -17,12 +18,14 @@ yargs.usage('Usage: $0 <command>')
     .argv;
 
 function checkWebsite(argv) {
+    console.log(argv.requestRetryAmount)
     brokenLinksChecker = new BrokenLinksChecker({
         url: argv.url, 
         mode: argv.mode,
         logger: {
             level: argv.log
-        }
+        },
+        requestRetriesAmount: argv.requestRetryAmount
     });
     brokenLinksChecker.start(argv.url);
 }
