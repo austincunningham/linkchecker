@@ -7,13 +7,18 @@ yargs.usage('Usage: $0 <command>')
     .command('link', 'Check for broken links', function(yargs){
         yargs
             .alias('u', 'url')
-            //.default('url', 'https://access.redhat.com/documentation/en-us/red_hat_openshift_api_management/1')
+            .alias('m', 'mode')
+            .default('url', 'https://austincunningham.ddns.net')
+            .default('mode', 'section')
     }, checkWebsite)
     .demandCommand()
     .help()
     .argv;
 
 function checkWebsite(argv) {
-    brokenLinksChecker = new BrokenLinksChecker();
+    brokenLinksChecker = new BrokenLinksChecker({
+        url: argv.url, 
+        mode: argv.mode
+    });
     brokenLinksChecker.start(argv.url);
 }
